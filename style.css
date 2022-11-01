@@ -1,13 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Allerta+Stencil&family=Kolker+Brush&family=Montserrat:wght@400;700&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-.html {
-  background-color: #ff1919;
+body {
+  height: 100vh;
+  background-color: #ffffff;
+  background-image: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #6284ff 50%,
+    #ff0000 100%
+  );
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  padding-top: 100px;
 }
 
-body {
-  background-color: #ff1919;
+h1 {
+  color: black;
+  font-size: 3rem;
+  text-align: center;
+}
+
+#rock {
+  font-family: "Alfa Slab One", cursive;
+}
+
+#paper {
+  font-family: "Kolker Brush", cursive;
+  font-size: 4.5rem;
+}
+
+#scissors {
+  font-family: "Allerta Stencil", sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player {
+  width: calc(50% - 20px);
+  margin: 0 auto;
+  background-color: rgb(183, 195, 248);
+  border-radius: 1rem;
+  padding: 20px;
+  margin-top: 50px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.player__name {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.player__score {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.player__choice {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.player__choice--button {
+  width: 150px;
+  height: 150px;
+  background-color: #f06363;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.player__choice--button:hover {
+  background-color: #ff0000;
+}
+
+.player__choice--button:active {
+  transform: scale(0.95);
+}
+
+.player__choice--button img {
+  width: 100%;
+  height: 100%;
 }
