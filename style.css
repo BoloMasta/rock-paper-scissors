@@ -40,6 +40,14 @@ h1 {
   font-family: "Allerta Stencil", sans-serif;
 }
 
+.result {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 30px;
+  height: 50px;
+  font-weight: bold;
+}
+
 .container {
   width: 100%;
   max-width: 1200px;
@@ -52,7 +60,7 @@ h1 {
 
 .player {
   width: calc(50% - 20px);
-  margin: 0 auto;
+  margin: 0 auto 30px auto;
   background-color: rgb(183, 195, 248);
   border-radius: 1rem;
   padding: 20px;
@@ -94,15 +102,48 @@ h1 {
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
-.player__choice--button:hover {
+.player__choice--button:not(:disabled):hover {
   background-color: #ff0000;
 }
 
-.player__choice--button:active {
+.player__choice--button:not(:disabled):active {
   transform: scale(0.95);
+}
+
+.player__choice--button:disabled {
+  background-color: #f8b7b7;
+  cursor: not-allowed;
 }
 
 .player__choice--button img {
   width: 100%;
   height: 100%;
+}
+
+.compResultActive {
+  background-color: #ff0000 !important;
+}
+
+.resetBtn {
+  text-transform: uppercase;
+  margin: 0 auto;
+  display: none;
+  background-color: #f06363;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.resetBtn:hover {
+  background-color: #ff0000;
+}
+
+.resetBtn:active {
+  transform: scale(0.95);
 }

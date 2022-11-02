@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="main.js" defer></script>
+
     <title>Rock-paper-scissors game</title>
   </head>
   <body>
@@ -14,7 +14,7 @@
       <span id="scissors">SCISSORS</span>
     </h1>
 
-    <p class="result">You win</p>
+    <p class="result">Choose your weapon 🗿-🧻-✂️</p>
 
     <div class="container">
       <div class="player">
@@ -23,13 +23,25 @@
           Score: <span class="player__score--value">0</span>
         </p>
         <div class="player__choice">
-          <button type="button" class="player__choice--button">
+          <button
+            type="button"
+            class="player__choice--button playerBtn"
+            value="rock"
+          >
             <img src="./img/rock.webp" alt="rock" class="player__choice" />
           </button>
-          <button type="button" class="player__choice--button">
-            <img src="./img/paper-3.webp" alt="paper" class="player__choice" />
+          <button
+            type="button"
+            class="player__choice--button playerBtn"
+            value="paper"
+          >
+            <img src="./img/paper.webp" alt="paper" class="player__choice" />
           </button>
-          <button type="button" class="player__choice--button">
+          <button
+            type="button"
+            class="player__choice--button playerBtn"
+            value="scissors"
+          >
             <img
               src="./img/scissors.webp"
               alt="scissors"
@@ -43,16 +55,32 @@
       <div class="player">
         <h2 class="player__name">Computer</h2>
         <p class="player__score">
-          Score: <span class="player__score--value">0</span>
+          Score:
+          <span class="player__score--value computer__score--value">0</span>
         </p>
         <div class="player__choice">
-          <button type="button" class="player__choice--button">
+          <button
+            type="button"
+            class="player__choice--button computer__choice--button"
+            value="rock"
+            disabled
+          >
             <img src="./img/rock.webp" alt="rock" class="player__choice" />
           </button>
-          <button type="button" class="player__choice--button">
-            <img src="./img/paper-3.webp" alt="paper" class="player__choice" />
+          <button
+            type="button"
+            class="player__choice--button computer__choice--button"
+            value="paper"
+            disabled
+          >
+            <img src="./img/paper.webp" alt="paper" class="player__choice" />
           </button>
-          <button type="button" class="player__choice--button">
+          <button
+            type="button"
+            class="player__choice--button computer__choice--button"
+            value="scissors"
+            disabled
+          >
             <img
               src="./img/scissors.webp"
               alt="scissors"
@@ -61,7 +89,9 @@
           </button>
         </div>
       </div>
-      <button type="button" class="resetBtn">reset</button>
     </div>
+    <button type="button" class="resetBtn">new game</button>
+
+    <script src="main.js" defer></script>
   </body>
 </html>
